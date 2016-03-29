@@ -9,6 +9,7 @@ A component based, website authoring interface built with ReactJS
 
 ##### TODO:
 * allow user to delete components
+* add list components (ul &amp; ol)
 * separate component menu into sections (inline, bootstrap, etc&hellip;)
 * add bootstrap carousel to demo a highly complex component
 * autofocus text when inline editing
