@@ -20,7 +20,7 @@ The development environment watches all files/folders in the source directory, a
 ## Architecture
 ### State Object
 A plain JavaScript object that represents the state of the app. Our state object looks like this:
-`
+```
 {
 	layout: {
     name: 'main',
@@ -42,7 +42,7 @@ A plain JavaScript object that represents the state of the app. Our state object
     activeComponentData: ''
 	}
 }
-`
+```
 ### Component Library
 A collection of components that can be used during authoring.
 
@@ -63,34 +63,34 @@ A react component that knows how to update the component (from component.js). Th
 
 #### data.js
 Each component has a data prop that holds all components data (text, classes, etc). Initial component data is defined using the React *defaultProps* method. Here is an example data prop for the h1 component.
-`
+```
 {
 	data: }
 		text: 'Heading 1',
 		class: 'h1'
 	}
 }
-`
+```
 #### schema.js
 A schema for the data property enforced using the React *propTypes* method. Data properties must be flat (1 level deep). Here is an example schema for the H1 component.
-`
+```
 {
   data: React.PropTypes.shape({
     text: React.PropTypes.string,
     class: React.PropTypes.string
   })
 }
-`
+```
 #### index.js
 Bundles the component, editor, schema, and data into a single object which can be imported by the Component Library.
-`
+```
 export default {
 	type: 'H1',
 	component: Component,
 	editor: Editor,
 	drop_zone: true
 }
-`
+```
 
 ## NPM Packages
 ### Babel
