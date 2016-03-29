@@ -1,0 +1,149 @@
+
+.layout {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px;
+    
+    &.authoring {
+        .container,
+        .container-fluid,
+        .row,
+        [class*="col-"] {
+            padding-bottom: 15px;
+        }
+        .section,
+        .footer,
+        .header,
+        .div,
+        .container,
+        .container-fluid,
+        .row,
+        [class*="col-"] {
+            border: 1px dotted @gray-dark;
+        }
+        .edit-btn-wrap {
+            width: 100%;
+            margin-bottom: 15px;
+            > .btn {
+                border-radius: 0 0 0 4px;
+                margin: -1px -1px 0 0;
+            }
+        }
+        .container,
+        .container-fluid,
+        [class*="col-"] {
+            > .edit-btn-wrap {
+                > .btn {
+                    margin-right: -16px;
+                }
+            }
+        }
+        .authoring-active {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            
+            h1, h2, h3, h4, h5, h6, p {
+                display: inline;
+                vertical-align: baseline;
+            }
+            > .btn {
+                &.btn-inline {
+                    margin: 0;
+                    padding: 0 0 0 5px;
+                    display: inline;
+                    text-decoration: underline;
+                    color: @brand-primary;
+                    border-radius: 0;
+                    border: 0;
+                    background: none;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: none;
+                        border: 0;
+                        text-decoration: none;
+                        outline: 0;
+                        color: darken(@brand-primary, 15%);
+                    }
+
+                    .fa {
+                        text-decoration: inherit;
+                    }
+                }
+            }
+            > .fa {
+                margin-left: 5px;
+                color: @brand-primary;
+            }
+            .pos-top-right {
+                position: absolute;
+                z-index: 1;
+                
+            }
+            .btn {
+                &.pos-top-right {
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 0 0 4px;
+                }
+            }
+            .fa {
+                &.pos-top-right {
+                    top: 7.5px;
+                    right: 7.5px;
+                    border-radius: 0;
+                }
+            }
+            &.editing {
+                position: relative;
+
+                [contentEditable="true"] {
+                    outline: 0;
+                }
+            }
+        }
+        
+        .btn-dark {
+            background-color: @gray-dark;
+            border-color: @gray-darker;
+            color: #fff;
+        }
+
+        .drop-zone {
+            clear: both;
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 15px;
+            margin-top: 15px;
+            border: 2px solid @gray-light;
+            color: @gray-light;
+            text-align: center;
+
+            &.over,
+            &:hover {
+                border-color: @brand-primary;
+                cursor: move;
+            }
+            &.transit {
+                background: none;
+                border:1px dashed @brand-primary;
+            }
+            
+        }
+    }
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}

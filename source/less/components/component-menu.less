@@ -1,0 +1,120 @@
+
+#drag_canvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    &.canvas-active {
+        z-index: 200;
+    }
+    &.canvas-disabled {
+        z-index: -1;
+    }
+}
+    #component_menu {
+        position: absolute;
+        border-radius: 3px;
+        box-shadow: 0 30px 60px rgba(0,0,0,.5);
+        margin: 0;
+        padding:0;
+        width: 210px; /* 2 columns */
+        z-index: 110;
+        overflow: hidden;
+        &.closed {
+            -webkit-transform: translate3d(210px,0, 0);
+            -moz-transform: translate3d(210px,0, 0);
+            transform: translate3d(210px,0, 0);
+        }
+        .panel-default {
+            background: @gray-dark;
+            border-color: @gray-base;
+            color: @gray-lighter;
+            margin-bottom: 0;
+            .panel-heading {
+                background: @gray-darker;
+                color: @gray-lighter;
+                border: 0;
+                cursor: move;
+                &:hover,
+                &:focus,
+                &:active {
+                    cursor: move;
+                }
+                .panel-title {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    color: @gray-lighter;
+                    cursor: move;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        cursor: move;
+                    }
+                    .fa {
+                        color: @gray-lighter;
+                    } 
+                }     
+            }
+            .panel-body {
+                background: @gray-dark;
+                color: @gray-lighter;
+                padding: 0;
+                .btn {
+                    background: @gray-dark;
+                    border-color: @gray-base;
+                    border-left: 0;
+                    border-right: 0;
+                    color: @gray-lighter;
+                    border-radius: 0;
+                    text-align: left;
+                }
+            }
+            .panel-footer {
+                background: @gray-darker;
+                color: @gray-lighter;
+                border: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                cursor: pointer;
+                &:hover,
+                &:focus,
+                &:active {
+                    cursor: pointer;
+                }
+            }
+            .components {
+                height: 400px;
+                overflow: auto;
+            }
+        }
+        .btn-toggle-menu {
+            position: absolute;
+            top:90px;
+            left:-30px;
+            width:30px;
+            padding:5px;
+            color: @gray-lighter;
+            background: @gray-lighter;
+            border:none;
+            border-radius:4px 0 0 4px;
+            text-shadow: 0 1px 1px @gray-lighter;
+            font-size: 25px;
+            outline: 0;
+        }
+        
+        .btn {
+            cursor: move;
+            &:focus,
+            &:active {
+                cursor: move;
+            }
+        }
+        
+        
+        .editor-actions {
+            height: 400px;
+            width: 100%;
+            overflow: auto;
+        }
+    }

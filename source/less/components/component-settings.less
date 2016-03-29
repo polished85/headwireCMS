@@ -1,0 +1,63 @@
+
+#component_settings {
+    color: @gray-lighter;
+    background: @gray-dark;
+    height:100%;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left:0;
+    margin: 0;
+    padding:15px 0;
+    width: 410px; /* 2 columns */
+    -webkit-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    overflow-x: visible;
+    z-index: 100;
+    border-right: 1px solid @gray-base;
+    box-shadow: 0 10px 20px rgba(0,0,0,.5);
+    
+    > .container-fluid {
+        position: relative;
+        z-index: 1;
+        background: @gray-dark;
+        height: 100%;
+    }
+
+  &.closed {
+      -webkit-transform: translate3d(-410px,0, 0);
+      -moz-transform: translate3d(-410px,0, 0);
+      transform: translate3d(-410px,0, 0);
+  }
+
+  .btn-toggle-menu {
+      position: absolute;
+      top:90px;
+      right:-45px;
+      width:45px;
+      padding:7.5px 5px;
+      color: @gray-lighter;
+      background: @gray-dark;
+      border:none;
+      border-radius:0 4px 4px 0;
+      font-size: 30px;
+      outline: 0;
+      border: 1px solid @gray-base;
+      border-left: 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,.5);
+  }
+  
+  .form-control {
+    max-width: 100%;
+  }
+  textarea{
+    &.form-control {
+      min-height: 120px;
+    }
+  }
+  .editor-actions {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
