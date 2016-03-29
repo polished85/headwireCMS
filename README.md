@@ -55,13 +55,13 @@ Actions are functions that update the state object. This is the only way to upda
 ### Component
 Components are modular and make up the component library. Each component consists of the following:
 
-**component.js**
+##### component.js
 A react component that represents the component to be rendered.
 
-**editor.js**
+##### editor.js
 A react component that knows how to update the component (from component.js). This is the component that appears in the *Component Settings* sidebar.
 
-**data.js**
+##### data.js
 Each component has a data prop that holds all components data (text, classes, etc). Initial component data is defined using the React *defaultProps* method. Here is an example data prop for the h1 component.
 ```
 {
@@ -71,7 +71,7 @@ Each component has a data prop that holds all components data (text, classes, et
 	}
 }
 ```
-**schema.js**
+##### schema.js
 A schema for the data property enforced using the React *propTypes* method. Data properties must be flat (1 level deep). Here is an example schema for the H1 component.
 ```
 {
@@ -81,7 +81,7 @@ A schema for the data property enforced using the React *propTypes* method. Data
   })
 }
 ```
-**index.js**
+##### index.js
 Bundles the component, editor, schema, and data into a single object which can be imported by the Component Library.
 ```
 export default {
