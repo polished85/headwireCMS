@@ -7,6 +7,12 @@ A component based, website authoring interface built with ReactJS
 1. `git clone git@github.com:polished85/headwireCMS.git`
 2. Open index.html found at `path/to/headwireCMS/public/`
 
+##### TODO:
+* allow user to delete components
+* separate component menu into sections (inline, bootstrap, etc&hellip;)
+* add bootstrap carousel to demo a highly complex component
+* autofocus text when inline editing
+
 ### Development Environment
 The development environment watches all files/folders in the source directory, and recompiles the app whenever a file is changed. The compiled app is found at `path/to/headwireCMS/public/js/app.js`
 
