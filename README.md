@@ -54,7 +54,7 @@ A plain JavaScript object that represents the state of the app. Our state object
 A collection of components that can be used during authoring.
 
 ### Component Engine
-Takes the state object as an input. Cross references components defined in state object with components in the component library and renders them into the layout.
+Takes the state object as an input. Cross references components defined in *layout.components* (from the state object) with components in the component library and renders them into the layout.
 
 ### Actions
 Actions are functions that update the state object. This is the only way to update state.
@@ -66,14 +66,14 @@ Components are modular and make up the component library. Each component consist
 A react component that represents the component to be rendered.
 
 ##### editor.js
-A react component that knows how to update the component (from component.js). This is the component that appears in the *Component Settings* sidebar.
+An editor component that knows how to update the component (from component.js). This is the component that appears in the *Component Settings* sidebar.
 
 ##### data.js
 Each component has a data prop that holds all components data (text, classes, etc). Initial component data is defined using the React *defaultProps* method. Here is an example data prop for the h1 component.
 ```
 {
-	data: }
-		text: 'Heading 1',
+	data: {
+		text: 'Heading 1 Initial Data',
 		class: 'h1'
 	}
 }
@@ -89,8 +89,11 @@ A schema for the data property enforced using the React *propTypes* method. Data
 }
 ```
 ##### index.js
-Bundles the component, editor, schema, and data into a single object which can be imported by the Component Library.
+Attaches data and schema to the component, and bundles the component, editor, and meta data into a single object. This is the object imported by the Component Library.
 ```
+Component.defaultProps = data
+Component.propTypes = schema
+
 export default {
 	type: 'H1',
 	component: Component,
