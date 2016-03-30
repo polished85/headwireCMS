@@ -54,7 +54,7 @@ A plain JavaScript object that represents the state of the app. Our state object
 A collection of components that can be used during authoring.
 
 ### Component Engine
-Takes the state object as an input. Cross references components defined in *layout.components* (from the state object) with components in the component library and renders them into the layout.
+Takes *layout.components* (from the state object) as an input. Cross references components in the component library and renders a component into the layout until all componets have been rendered.
 
 ### Actions
 Actions are functions that update the state object. This is the only way to update state.
