@@ -30,23 +30,23 @@ A plain JavaScript object that represents the state of the app. Our state object
 ```
 {
 	layout: {
-    name: 'main',
-    authoring: false,
-    components: []
+        name: 'main',
+        authoring: false,
+        components: []
 	},
 	componentMenu: {
-    isOpen: true, 
-    drag_canvas: false, 
-    left: 100,
-    top: 10, 
-    diff_left: 0,
-    diff_top: 0  
+        isOpen: true, 
+        drag_canvas: false, 
+        left: 100,
+        top: 10, 
+        diff_left: 0,
+        diff_top: 0  
 	},
 	componentSettings: {
-    isOpen: false,
-    activeComponent: 'none',
-    activeComponentId: 0,
-    activeComponentData: ''
+        isOpen: false,
+        activeComponent: 'none',
+        activeComponentId: 0,
+        activeComponentData: ''
 	}
 }
 ```
@@ -82,10 +82,10 @@ Each component has a data prop that holds all components data (text, classes, et
 A schema for the data property enforced using the React *propTypes* method. Data properties must be flat (1 level deep). Here is an example schema for the H1 component.
 ```
 {
-  data: React.PropTypes.shape({
-    text: React.PropTypes.string,
-    class: React.PropTypes.string
-  })
+    data: React.PropTypes.shape({
+        text: React.PropTypes.string,
+        class: React.PropTypes.string
+    })
 }
 ```
 ##### index.js
